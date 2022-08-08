@@ -4,11 +4,65 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:DanceNotes.Core"
-    Shell.FlyoutBehavior="Disabled">
-
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+    xmlns:latinviews="clr-namespace:DanceNotes.UI.Views.Latin;assembly=DanceNotes.UI"
+    xmlns:ballroomviews="clr-namespace:DanceNotes.UI.Views.Ballroom;assembly=DanceNotes.UI"
+    Shell.FlyoutBehavior="Flyout">
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Latin" FlyoutDisplayOptions="AsMultipleItems"
+             Icon="pasodoble.png">
+            <ShellContent Title="ChaChaCha"
+                          FlyoutIcon="chachacha.png"
+                          Icon="chachacha.png"
+                          Route="ChaChaCha" 
+                          ContentTemplate="{DataTemplate latinviews:ChaChaChaPage}" />
+            <ShellContent Title="Samba"
+                          FlyoutIcon="samba.png"
+                          Icon="samba.png"
+                          Route="Samba" 
+                          ContentTemplate="{DataTemplate latinviews:SambaPage}"/>
+            <ShellContent Title="Rhumba"
+                          FlyoutIcon="rhumba.png"
+                          Icon="rhumba.png"
+                          Route="Rhumba" 
+                          ContentTemplate="{DataTemplate latinviews:RhumbaPage}"/>
+            <ShellContent Title="Paso Doble"
+                          FlyoutIcon="pasodoble.png"
+                          Icon="pasodoble.png"
+                          Route="PasoDoble" 
+                          ContentTemplate="{DataTemplate latinviews:PasoDoblePage}"/>
+            <ShellContent Title="Jive"
+                          FlyoutIcon="jive.png"
+                          Icon="jive.png"
+                          Route="Jive" 
+                          ContentTemplate="{DataTemplate latinviews:JivePage}"/>
+        </Tab>
+        <Tab Title="Ballroom" FlyoutDisplayOptions="AsMultipleItems"
+             Icon="waltz.png">
+            <ShellContent Title="Waltz"
+                          FlyoutIcon="waltz.png"
+                          Icon="waltz.png"
+                          Route="Waltz" 
+                          ContentTemplate="{DataTemplate ballroomviews:WaltzPage}"/>
+            <ShellContent Title="Tango"
+                          FlyoutIcon="tango.png"
+                          Icon="tango.png"
+                          Route="Tango" 
+                          ContentTemplate="{DataTemplate ballroomviews:TangoPage}"/>
+            <ShellContent Title="Vienesse Waltz"
+                          FlyoutIcon="vienessewaltz.png"
+                          Icon="vienessewaltz.png"
+                          Route="VienesseWaltz" 
+                          ContentTemplate="{DataTemplate ballroomviews:VienesseWaltzPage}"/>
+            <ShellContent Title="Foxtrot"
+                          FlyoutIcon="foxtrot.png"
+                          Icon="foxtrot.png"
+                          Route="dance?classification=Foxtrot" 
+                          ContentTemplate="{DataTemplate ballroomviews:FoxtrotPage}"/>
+            <ShellContent Title="QuickStep"
+                          FlyoutIcon="quickstep.png"
+                          Icon="quickstep.png"
+                          Route="QuickStep" 
+                          ContentTemplate="{DataTemplate ballroomviews:QuickStepPage}"/>
+        </Tab>
+    </FlyoutItem>
 </Shell>

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -12,6 +12,10 @@
 
   <ItemGroup>
     <Folder Include="Web\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DanceNotes.Maui.Models\DanceNotes.Maui.Models.csproj" />
   </ItemGroup>
 
 </Project>

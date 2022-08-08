@@ -20,6 +20,17 @@
 	<ItemGroup>
 	  <None Remove="Resources\AppIcon\appicon.svg" />
 	  <None Remove="Resources\AppIcon\appiconfg.svg" />
+	  <None Remove="Resources\Images\appicon.png" />
+	  <None Remove="Resources\Images\chachacha.png" />
+	  <None Remove="Resources\Images\foxtrot.png" />
+	  <None Remove="Resources\Images\jive.png" />
+	  <None Remove="Resources\Images\pasodoble.png" />
+	  <None Remove="Resources\Images\quickstep.png" />
+	  <None Remove="Resources\Images\rhumba.png" />
+	  <None Remove="Resources\Images\samba.png" />
+	  <None Remove="Resources\Images\tango.png" />
+	  <None Remove="Resources\Images\vienessewaltz.png" />
+	  <None Remove="Resources\Images\waltz.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -52,16 +63,32 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Ballroom\" />
-    <Folder Include="Views\Latin\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <MauiIcon Include="Resources\AppIcon\appicon.svg">
       <Color>#512BD4</Color>
       <ForegroundFile>Resources\AppIcon\appiconfg.svg</ForegroundFile>
     </MauiIcon>
     <MauiIcon Include="Resources\AppIcon\appiconfg.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <MauiImage Include="Resources\Images\chachacha.png" />
+    <MauiImage Include="Resources\Images\foxtrot.png" />
+    <MauiImage Include="Resources\Images\jive.png" />
+    <MauiImage Include="Resources\Images\pasodoble.png" />
+    <MauiImage Include="Resources\Images\quickstep.png" />
+    <MauiImage Include="Resources\Images\rhumba.png" />
+    <MauiImage Include="Resources\Images\samba.png" />
+    <MauiImage Include="Resources\Images\tango.png" />
+    <MauiImage Include="Resources\Images\vienessewaltz.png" />
+    <MauiImage Include="Resources\Images\waltz.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <MauiSplashScreen Include="Resources\Images\appicon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DanceNotes.Maui.Common\DanceNotes.Maui.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -73,6 +100,42 @@
       <SubType>Code</SubType>
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <MauiXaml Update="Views\Ballroom\FoxtrotPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Ballroom\QuickStepPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Ballroom\TangoPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Ballroom\VienesseWaltzPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Ballroom\WaltzPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Controls\SylabusControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Latin\ChaChaChaPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Latin\JivePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Latin\PasoDoblePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Latin\RhumbaPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\Latin\SambaPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
   </ItemGroup>
 
 </Project>

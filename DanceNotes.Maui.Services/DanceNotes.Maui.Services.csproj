@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,12 +7,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Persistance\Seed\seed.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Persistance\Seed\seed.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Web\" />
-    <Folder Include="Persistance\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DanceNotes.Common\DanceNotes.Common.csproj" />
+    <ProjectReference Include="..\DanceNotes.Domain\DanceNotes.Domain.csproj" />
+    <ProjectReference Include="..\DanceNotes.Maui.Domain\DanceNotes.Maui.Domain.csproj" />
   </ItemGroup>
 
 </Project>

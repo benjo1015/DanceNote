@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DanceNotes.Maui.Domain\DanceNotes.Maui.Domain.csproj" />
     <ProjectReference Include="..\DanceNotes.Maui.Models\DanceNotes.Maui.Models.csproj" />
   </ItemGroup>
 

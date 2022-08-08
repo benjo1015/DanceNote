@@ -1,6 +1,8 @@
-﻿namespace DanceNotes.Core.Database;
+﻿using DanceNotes.Domain.Persistance;
 
-public class DatabaseFactory
+namespace DanceNotes.Core.Database;
+
+public class DatabaseFactory : IDatabaseFactory
 {
     public string GetDatabasePath(string databaseName)
     {
